@@ -12,6 +12,6 @@ title: 工程文档
 
 ## 当前工作
 
-内核以 `qiyu-kernel` 为主仓库，保留 Linux 主线历史和按子系统维护的下游提交。运行时、调试和 rootfs 的七个独立功能仓库已上传首批源码；[仓库架构](wiki/architecture.html) 说明各自职责，[发布记录](wiki/source-publication.html) 列出固定提交和验证范围。
+内核以 `qiyu-kernel` 为主仓库，保留 Linux 主线历史和按子系统维护的下游提交。运行时、调试和 rootfs 的七个独立功能仓库已上传首批源码；[仓库架构]({{ '/wiki/architecture/' | relative_url }}) 说明各自职责，[发布记录]({{ '/wiki/source-publication/' | relative_url }}) 列出固定提交和验证范围。
 
 工程文档集中在这里；具体硬件的功能验收、物理效果与长期稳定性各自记录，不以目录或规划代替验收。

@@ -1,12 +1,15 @@
 ---
 layout: default
-title: 分离内核、功能源码与工程文档
+title: 把内核、VR 功能与工程文档分开维护
+description: 保留可更新的主线提交栈，按功能组织源码，把 Wiki 和 Blog 放到独立工程站点。
 ---
 
-内核以 `qiyu-kernel` 为主仓库，A081 的初始下游提交栈建立在 Linux 7.3 的真实主线记录之上。运行时按共享采集、头部跟踪、手柄跟踪、VR 接入和会话管理拆分；调试前后端同仓，rootfs 保留系统适配器、设备和功能 profile 的扩展维度。
+硬件、系统和 VR 开发积累到一定程度后，源码需要按功能分开维护。内核以 qiyu-kernel 为主仓库，在真实 Linux 主线记录上保留 A081 下游提交；驱动、binding/DTS 和配置继续按子系统组织，方便以后更新基底。
 
-跨仓库规划从 kernel 主分支迁到本仓库的 Wiki；Blog 记录变化过程。内核仓库保留内核源码、型号构建说明和维护记录。
+用户态分成统一设备采集、头部跟踪、手柄跟踪、VR runtime 和会话管理。调试网页、后端、API 与视频 helper 保持同仓；rootfs 用系统适配器、设备 overlay 和功能 profile 组合所需模块，给更多系统和奇遇型号留下入口。
 
-七个功能源码仓库已完成首次发布，包含来源摘要和可执行的构建/打包入口。共享采集、头部跟踪、ARM32 SDK helper、SteamVR provider、Rust/WebRTC 后端及原生观测 helper 已离线编译；会话脚本完成打包和语法验证，rootfs 完成两种系统组合的合成基底组装验证，未重新生成完整系统或实机验收。没有操作设备或晋升基线。具体边界见 [架构规划]({{ '/wiki/architecture/' | relative_url }})。
+分仓围绕代码所有权和接口展开。统一采集仍可作为库嵌入唯一生产者，头部与手柄继续共享硬件输入；系统装配通过固定提交和摘要选择组件。
 
-[源码发布与验证记录]({{ '/wiki/source-publication/' | relative_url }}) 包含具体提交和限制。
+工程文档从 kernel 主分支迁入 qiyu-docs：Wiki 按模块解释实现与维护，Blog 按开发阶段讲述过程。首批历史整理串起主线启动、持久 Debian、相机与 DSP、SteamOS、手柄、调试台和渲染优化。
+
+继续阅读：[仓库架构]({{ '/wiki/architecture/' | relative_url }})、[开发历程]({{ '/wiki/development-history/' | relative_url }})、[源码版本记录]({{ '/wiki/source-publication/' | relative_url }})。

@@ -2,4 +2,8 @@
 layout: default
 title: 开发 Blog
 ---
-<h1>开发 Blog</h1><p class="lead">保留工程决策与验证过程。</p><ul>{% for post in site.journal %}<li> · <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>{% endfor %}</ul>
+<h1>开发 Blog</h1>
+<p class="lead">从主线启动到 SteamOS 与 VR：按开发阶段记录主要成果、实现方法和关键转折。</p>
+<div class="post-list">{% for post in site.journal %}
+<article class="post-card"><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>{% if post.description %}<p>{{ post.description }}</p>{% endif %}</article>
+{% endfor %}</div>

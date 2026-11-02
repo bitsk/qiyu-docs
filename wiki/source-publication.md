@@ -27,7 +27,7 @@ title: r1 源码发布与验证
 - debug 的网页、Rust 后端、API 索引和原生视频源码同仓。Cargo.lock 固定依赖，WebRTC release 后端完成 AArch64 构建，网页资源随二进制打包；IMX 与 OpenVR 时序观测 helper 也独立构建通过。video/ 的编码/转换源码保留历史配方，尚未统一为一个便携构建入口。
 - rootfs 实现 Debian / SteamOS 适配器、A081 overlay、maintenance/vr/debug profile、精确组件提交锁定与组合 manifest。两种系统的 plan 和基于明确标记为合成测试基底的组装路径已运行，包含实际交叉编译设备工具；此次未重新下载/准备完整 rootfs。SteamOS 基础归档保持字节不变，overlay 单独打包；Debian foreign-stage 需要目标架构第二阶段。
 
-各仓库 provenance/source-import.json 记录导入来源及变更前后 SHA-256，provenance/offline-validation.json 记录构建范围。rootfs 的 components.lock.json 固定选用提交和公开头摘要；固件、专有库、设备凭据与构建产物均未提交到源码仓库。
+rootfs 的 components.lock.json 固定选用提交和公开头摘要；固件、专有库、设备凭据与构建产物均未提交到源码仓库。
 
 ## 验收与回退
 

@@ -19,3 +19,5 @@ title: 工程文档
 内核以 [qiyu-kernel](https://github.com/bitsk/qiyu-kernel) 为主，保留 Linux 主线历史和按子系统维护的下游提交。设备服务、跟踪、VR、会话、调试与 rootfs 分别在功能仓库中维护；[仓库架构]({{ '/wiki/architecture/' | relative_url }}) 和 [源码发布记录]({{ '/wiki/source-publication/' | relative_url }}) 提供入口。
 
 工程文档与 Wiki/Blog 页面集中在这里。历史资料的路径与摘要见 [来源附录]({{ '/wiki/evidence-sources/' | relative_url }})。
+
+原厂固件、DSP 与 SDK/Bionic 依赖现由私有 qiyu-vendor Release 独立保存，rootfs 按摘要锁直接下载和装配；[原厂二进制归档指南]({{ '/wiki/vendor-assets/' | relative_url }}) 说明版本、缓存和校准边界。

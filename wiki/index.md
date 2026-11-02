@@ -22,6 +22,7 @@ title: 工程 Wiki
 ## 开发与维护
 
 - [仓库架构与职责]({{ '/wiki/architecture/' | relative_url }})：八个代码仓库与独立文档仓库。
+- [原厂二进制归档]({{ '/wiki/vendor-assets/' | relative_url }})
 - [构建与发布]({{ '/wiki/build-and-release/' | relative_url }})：组件构建、版本锁定与系统组合。
 - [r1 源码发布记录]({{ '/wiki/source-publication/' | relative_url }})：首次拆库的具体提交和导入范围。
 - [内核维护与 rebase](https://github.com/bitsk/qiyu-kernel/blob/main/devices/a081/MAINTAINING.md)。

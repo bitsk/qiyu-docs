@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 12
 title: 原厂依赖从镜像提取迁到独立资产仓库
 ---
 

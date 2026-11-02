@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 9
 title: 整理温控档位与分相位视频
 description: 把性能策略、Rust 调试后端和短短长相机预览纳入系统服务。
 ---

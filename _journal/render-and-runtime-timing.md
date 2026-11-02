@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 10
 title: 优化 SteamVR 渲染与呈现调度
 description: 聚焦 Turnip 查询等待、显示缓冲与可持久化的会话时序。
 ---

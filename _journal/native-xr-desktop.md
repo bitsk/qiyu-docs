@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 4
 title: 把 XR 桌面从 QEMU 搬到真实头显
 description: 桌面内容、OpenXR 图层、实际 IIO 姿态与 Vulkan 输出在 A081 上连接起来。
 ---

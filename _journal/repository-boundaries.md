@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 11
 title: 把内核、VR 功能与工程文档分开维护
 description: 保留可更新的主线提交栈，按功能组织源码，把 Wiki 和 Blog 放到独立工程站点。
 ---

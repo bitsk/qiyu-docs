@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 1
 title: 让主线 Linux 在 MIX 上启动并点亮内屏
 description: 从原厂硬件资料出发，接通 USB、UFS、CPU、GPU 与双 DSI 显示。
 ---

@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 8
 title: 把原厂手柄定位接入正式 VR 会话
 description: 恢复 SPI、相位门控、Bionic SDK 和 DSP 依赖，连通双手位置输出。
 ---

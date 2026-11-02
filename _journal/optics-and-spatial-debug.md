@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 7
 title: 复用原厂光学模型，建立统一调试台
 description: 把光学校正与设备观测整理成可独立演进的运行时和调试功能。
 ---

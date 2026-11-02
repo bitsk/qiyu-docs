@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 5
 title: 把 SteamOS 和原生 SteamVR 接到 MIX
 description: 独立 ARM64 rootfs、匹配的桌面图形栈与分离 GPU/KMS 的直显路径。
 ---

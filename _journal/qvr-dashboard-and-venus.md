@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 6
 title: 让真实跟踪、Dashboard 和硬件视频一起工作
 description: QVR 相机/IMU 头姿接入 SteamVR，主界面与 Venus H.264 链路逐步整合。
 ---

@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 3
 title: 接通相机、IMU 和原厂 CDSP 跟踪核心
 description: 让真实图像和惯性数据进入 Linux，并恢复 QVR 所需的 RPC 与共享内存。
 ---

@@ -1,5 +1,6 @@
 ---
 layout: default
+order: 2
 title: 从临时诊断环境走向持久 Debian
 description: 保留 Android 数据，建立 osstore，让主线设备支持进入真正的 Linux 系统。
 ---

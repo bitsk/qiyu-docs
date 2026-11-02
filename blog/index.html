@@ -4,6 +4,6 @@ title: 开发 Blog
 ---
 <h1>开发 Blog</h1>
 <p class="lead">从主线启动到 SteamOS 与 VR：按开发阶段记录主要成果、实现方法和关键转折。</p>
-<div class="post-list">{% for post in site.journal %}
+<div class="post-list">{% assign entries = site.journal | sort: 'order' %}{% for post in entries %}
 <article class="post-card"><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>{% if post.description %}<p>{{ post.description }}</p>{% endif %}</article>
 {% endfor %}</div>

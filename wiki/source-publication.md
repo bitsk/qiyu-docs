@@ -31,4 +31,4 @@ rootfs 的 components.lock.json 固定选用提交和公开头摘要；固件、
 
 ## 验收与回退
 
-源码分库和主机编译不能替代设备、物理呈现或佩戴验收。这次没有刷写分区、安装设备服务、改变已验证系统或晋升基线。原私有 [qiyu-kernel-snapshot-r1](https://github.com/bitsk/qiyu-kernel-snapshot-r1) 和旧 Release 保留；公开 [内核 Release](https://github.com/bitsk/qiyu-kernel/releases/tag/a081-7.3.0-r1) 也未改写。
+源码分库和主机编译不能替代设备、物理呈现或佩戴验收。这次没有刷写分区、安装设备服务、改变已验证系统或晋升基线。原私有 本地回退备份 和旧 Release 保留；公开 [内核 Release](https://github.com/bitsk/qiyu-kernel/releases/tag/a081-7.3.0-r1) 也未改写。

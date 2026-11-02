@@ -11,10 +11,10 @@ title: 原厂二进制归档
 
 | 包 | 内容 | 文件数 | 压缩字节 |
 | --- | --- | ---: | ---: |
-| firmware | GPU、ADSP/CDSP/SLPI、Wi-Fi、Bluetooth 与 regulatory 数据 | 67 | 14,375,073 |
-| qvr | 原厂 DSP runtime、SNPE skeleton、型号默认 config6 | 13 | 14,302,880 |
-| controller | 原厂手柄 SDK、ARM32 Bionic 依赖闭包、型号默认配置 | 164 | 40,594,849 |
-| controller-dsp | SNPE 运行时动态加载的主机插件 | 3 | 14,506 |
+| firmware | GPU、ADSP/CDSP/SLPI、Wi-Fi、Bluetooth 与 regulatory 数据 | 67 | 14,375,070 |
+| qvr | 原厂 DSP runtime、SNPE skeleton、型号默认 config6 | 13 | 14,302,876 |
+| controller | 原厂手柄 SDK、ARM32 Bionic 依赖闭包、型号默认配置 | 164 | 40,594,836 |
+| controller-dsp | SNPE 运行时动态加载的主机插件 | 3 | 14,499 |
 
 快照 `a081-vendor-r1` 表示归档版本；未核实的 OEM 固件版本保持 unknown。前三包从既有本地文件逐项核对原始清单，动态插件另外记录 stock SDK 原目录、ELF DT_NEEDED 与 SHA-256，Git 里不存二进制；新增版本使用新标签，不覆盖旧资产。每个型号以 devices/<model>/catalog.json 维护清单和来源，按功能拆包。
 

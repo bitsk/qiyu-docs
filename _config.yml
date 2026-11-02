@@ -3,6 +3,7 @@ description: 奇遇 Linux 工程文档与开发记录
 url: https://bitsk.github.io
 baseurl: /qiyu-docs
 markdown: kramdown
+permalink: pretty
 collections:
   journal:
     output: true

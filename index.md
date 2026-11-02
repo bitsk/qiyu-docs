@@ -20,4 +20,4 @@ title: 工程文档
 
 工程文档与 Wiki/Blog 页面集中在这里。历史资料的路径与摘要见 [来源附录]({{ '/wiki/evidence-sources/' | relative_url }})。
 
-原厂固件、DSP 与 SDK/Bionic 依赖现由私有 qiyu-vendor Release 独立保存，rootfs 按摘要锁直接下载和装配；[原厂二进制归档指南]({{ '/wiki/vendor-assets/' | relative_url }}) 说明版本、缓存和校准边界。
+原厂固件、DSP 与 SDK/Bionic 依赖现由公开 qiyu-vendor Release 独立保存，rootfs 按摘要锁直接下载和装配；[原厂二进制归档指南]({{ '/wiki/vendor-assets/' | relative_url }}) 说明版本、缓存和校准边界。

@@ -56,4 +56,4 @@ prepare 调用对应系统适配器准备基础归档；assemble 接收基础归
 
 每个功能仓库的 provenance/ 保存来源与构建摘要。组合 manifest 固定组件提交、接口摘要和产物 SHA-256。工程里程碑与实现过程写入 Wiki/Blog；具体设备记录的测量范围留在来源附录，已发布标签、Release 与回退材料保持可追溯。
 
-原厂依赖现在由私有 qiyu-vendor Release 提供，qiyu-rootfs 的 devices/<model>/vendor.lock.json 锁定下载内容；tools/vendor.py 先验证整包，再逐文件校验并生成安装映射。缓存准备好后 verify / assemble 均可离线执行。每台设备的 persist 校准单独注入；完整系统和设备验收仍是独立门槛。
+原厂依赖现在由公开 qiyu-vendor Release 提供，qiyu-rootfs 的 devices/<model>/vendor.lock.json 锁定下载内容；tools/vendor.py 先验证整包，再逐文件校验并生成安装映射。缓存准备好后 verify / assemble 均可离线执行。每台设备的 persist 校准单独注入；完整系统和设备验收仍是独立门槛。

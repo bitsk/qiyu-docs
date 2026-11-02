@@ -5,7 +5,7 @@ title: 原厂二进制归档
 
 # 原厂二进制归档
 
-[bitsk/qiyu-vendor](https://github.com/bitsk/qiyu-vendor) 是私有资产仓库，Git 保存来源清单和打包工具，二进制放在 [固定 Release](https://github.com/bitsk/qiyu-vendor/releases/tag/a081-vendor-r1)。公开代码仓库只记录版本、资产 ID 和摘要；正常构建不再反复提取整份原厂镜像。
+[bitsk/qiyu-vendor](https://github.com/bitsk/qiyu-vendor) 是公开资产仓库，Git 保存来源清单和打包工具，二进制放在 [固定 Release](https://github.com/bitsk/qiyu-vendor/releases/tag/a081-vendor-r1)。公开代码仓库只记录版本、资产 ID 和摘要；正常构建不再反复提取整份原厂镜像。
 
 ## A081 首批快照
 
@@ -27,7 +27,7 @@ title: 原厂二进制归档
 在 qiyu-rootfs 仓库：
 
 ```sh
-# 已登录且有权限访问私有资产仓库的 gh；不在命令或源码中传令牌。
+# 当前下载工具使用已登录的 gh；不在命令或源码中传令牌。
 python3 tools/vendor.py fetch --output /new/vendor-cache
 python3 tools/vendor.py verify --cache /new/vendor-cache
 
@@ -47,4 +47,6 @@ qiyu-controller-tracking 可用 `tools/build.py --ndk /path/to/ndk --vendor-cach
 
 ## 验证边界
 
-本次已完成冷下载、逐文件校验、使用下载所得 libc++ 的 ARM32 编译和合成基底 rootfs 装配；未执行原厂二进制、刷写分区、更新设备或晋升基线。完整设备验收独立记录。来源/摘要一致不等于制造商签名认证，私有归档不声明公开再分发许可。
+本次已完成冷下载、逐文件校验、使用下载所得 libc++ 的 ARM32 编译和合成基底 rootfs 装配；未执行原厂二进制、刷写分区、更新设备或晋升基线。完整设备验收独立记录。来源/摘要一致不等于制造商签名认证，仓库公开不构成额外的二进制许可授予。
+
+r1，按用户要求将 qiyu-vendor 与现有 Release 公开。历史 Release 资产和摘要保持不变，旧清单中的 private 描述反映当时发布状态；当前仓库可见性与 rootfs 新锁文件为 public。

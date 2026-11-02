@@ -19,7 +19,7 @@ title: 仓库架构与职责
 | [qiyu-debug](https://github.com/bitsk/qiyu-debug) | 调试网页、后端 API、遥测、相机/屏幕预览、硬件编码与 WebRTC | 前后端同仓，订阅各生产者的数据，控制请求走会话 API |
 | [qiyu-rootfs](https://github.com/bitsk/qiyu-rootfs) | 多系统配方、软件包/系统服务、设备 overlay、固件导入清单、initramfs 与镜像封装 | 用固定提交/Release 与 SHA-256 装配所选组件 |
 
-原厂二进制单独归入私有 [qiyu-vendor](https://github.com/bitsk/qiyu-vendor)，Git 保存按型号划分的来源/摘要清单，Release 保存固件、DSP runtime 和 SDK/Bionic 依赖包。rootfs 固定资产 ID、归档及逐文件 SHA-256，直接下载和装配，不把二进制塞进代码仓库，也不以原厂镜像提取作为日常构建步骤。每台设备的 persist 校准独立保管。详见 [原厂二进制归档]({{ '/wiki/vendor-assets/' | relative_url }})。
+原厂二进制单独归入公开 [qiyu-vendor](https://github.com/bitsk/qiyu-vendor)，Git 保存按型号划分的来源/摘要清单，Release 保存固件、DSP runtime 和 SDK/Bionic 依赖包。rootfs 固定资产 ID、归档及逐文件 SHA-256，直接下载和装配，不把二进制塞进代码仓库，也不以原厂镜像提取作为日常构建步骤。每台设备的 persist 校准独立保管。详见 [原厂二进制归档]({{ '/wiki/vendor-assets/' | relative_url }})。
 
 独立仓库以独立构建、版本和功能边界为依据，不强制每个仓库新增一个常驻进程。统一采集可以作为库嵌入唯一生产者，并通过共享缓冲/IPC 服务其他消费者。A081 头部与手柄跟踪共享四路相机输入；拆库后保持统一采集和曝光调度，保留帧身份、曝光时间、时钟域、缓冲生命周期和有效性信息。跟踪接口的 schema/客户端包由其所属功能仓库维护并单独标明版本，runtime 适配这些接口；拆分不放宽已有质量和时间门限。
 

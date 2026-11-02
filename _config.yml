@@ -1,0 +1,10 @@
+title: Qiyu Engineering
+description: 奇遇 Linux 工程文档与开发记录
+url: https://bitsk.github.io
+baseurl: /qiyu-docs
+markdown: kramdown
+collections:
+  journal:
+    output: true
+    permalink: /blog/:name/
+exclude: [AGENTS.md, README.md, history]
